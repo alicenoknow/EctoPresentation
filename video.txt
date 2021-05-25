@@ -1,0 +1,19 @@
+mix ecto.create -r Pollution.Repo
+
+mix ecto.migrate
+
+iex -S mix
+
+PollutionData.importData()
+
+Pollution.queryAllMeasurements()
+
+Pollution.getStationMean(, "PM10")
+
+Pollution.countOverLimits("PM10")
+
+SELECT *
+FROM stations;
+
+SELECT *
+FROM measurements;
